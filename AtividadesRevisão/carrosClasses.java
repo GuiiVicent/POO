@@ -11,8 +11,30 @@ estacionamento localizado na Rua Avestruz, CEP 90001007:
 2) Chevrolet Onix cinza, placa FUN2M33
 3) Ford Ka vermelho, placa GEZ0W35  */
 
-public class carros {
+public class carrosClasses {
+
+    //Criando a classe do carro
+    public static class Carro{
+        public String marcaDoCarro;
+        public String modeloDoCarro;
+        public String corDoCarro;
+        public String placaDoCarro;
+    }
+
+    //Criando a classe do estacionamento
+    public static class Estacionamento{
+        public String endereco;
+        public long cep;
+        public int quantidadeCarros;
+    }
     public static void main(String[] args) {
-        
+
+        Carro carroHyundai;
+        carroHyundai = new Carro();
+
+        carroHyundai.marcaDoCarro = "Hyundai";
+        carroHyundai.modeloDoCarro = "HB20";
+        carroHyundai.corDoCarro = "preto";
+        carroHyundai.placaDoCarro = "BEE4F00";
     }
 }

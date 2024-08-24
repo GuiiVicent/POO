@@ -25,7 +25,7 @@ Observação: seu programa não deve aceitar números pares e nem números acima
 
 import java.util.*;
 
-public class borboletas {
+public class borboletasFor {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         int numeroRecebido;
@@ -33,7 +33,7 @@ public class borboletas {
         do {
             System.out.print("Digite um número ímpar para fazer a borboletinha: ");
             numeroRecebido = entrada.nextInt();
-        } while ((numeroRecebido % 2) == 0 && numeroRecebido < 20);
+        } while ((numeroRecebido % 2) == 0 || numeroRecebido > 20);
 
         int metadeDoNumeroRecebido = numeroRecebido / 2;
 
@@ -72,7 +72,6 @@ public class borboletas {
             }
             System.out.println("");
         }
-
         entrada.close();
     }
 }
