@@ -19,22 +19,59 @@ public class carrosClasses {
         public String modeloDoCarro;
         public String corDoCarro;
         public String placaDoCarro;
+
+        //Criando um construtor para inicializar o carro
+        public Carro(String marca, String modelo, String cor, String placa){
+            this.marcaDoCarro = marca;
+            this.modeloDoCarro = modelo;
+            this.corDoCarro = cor;
+            this.placaDoCarro = placa;
+        }
     }
 
     //Criando a classe do estacionamento
     public static class Estacionamento{
         public String endereco;
         public long cep;
+        public Carro[] lugares;
         public int quantidadeCarros;
+
+        //Criando um construtor para inicilizar o estacionamento
+        public Estacionamento(String endereco, long cep){
+            this.endereco = endereco;
+            this.cep = cep;
+            this.lugares = new Carro[50];
+            this.quantidadeCarros = 0;
+        }
+
+        //Método para colocar um carro dentro do estacionamento
+        public void adicionarCarro(Carro carro){
+            if(quantidadeCarros < lugares.length) {
+                lugares[quantidadeCarros] = carro;
+                quantidadeCarros++;
+            } else {
+                System.out.println("O estacionamento está lotado!");
+            }
+        }
+
+        //Método para listar os carros dentro do estacionamento
+        public void listarCarros(){
+            
+        }
     }
     public static void main(String[] args) {
 
-        Carro carroHyundai;
-        carroHyundai = new Carro();
+        //Criando o estacionamento dando os parâmetros pedidos pelo construtor
+        Estacionamento estacionamento = new Estacionamento("Rua Avestruz", 90001007);
 
-        carroHyundai.marcaDoCarro = "Hyundai";
-        carroHyundai.modeloDoCarro = "HB20";
-        carroHyundai.corDoCarro = "preto";
-        carroHyundai.placaDoCarro = "BEE4F00";
+        //Criando os três carros dando os parâmetros pedidos pelo construtor
+        Carro carroHyundai = new Carro("Hyundai", "HB20", "preto", "BEE4F00");
+        Carro carroChevrolet = new Carro("Chevrolet", "Onix", "cinza", "FUN2M33");
+        Carro carroFord = new Carro("Ford", "Ka", "vermelho", "GEZ0W35");
+
+        estacionamento.adicionarCarro(carroHyundai);
+        estacionamento.adicionarCarro(carroChevrolet);
+        estacionamento.adicionarCarro(carroFord);
+
     }
 }
