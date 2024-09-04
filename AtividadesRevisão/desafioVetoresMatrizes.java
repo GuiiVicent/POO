@@ -13,6 +13,16 @@ Entretanto, há várias outras formas de ordenar esse mesmo vetor em forma de on
 Como outro exemplo, o vetor [ 4, 7, 8, 3, 1, 5, 8, 8, 7, 4, 2, 3, 9 ] poderia ser ordenado em forma de onda da 
 seguinte forma: [ 4, 7, 3, 8, 1, 5, 4, 8, 7, 8, 2, 9, 3]. */
 
-public class desafioVetoresMatrizes {
+import java.util.*;
 
+public class desafioVetoresMatrizes {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        //Recebendo o tamanho do vetor
+        System.out.println("Digite o tamanho do vetor que deseja: ");
+        int tamanhoDoVetor = entrada.nextInt();
+
+        int vetorOnda[] = new int[tamanhoDoVetor];
+    }
 }
