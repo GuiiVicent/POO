@@ -33,7 +33,7 @@ public class carrosClasses {
     public static class Estacionamento{
         public String endereco;
         public long cep;
-        public Carro[] lugares;
+        public Carro lugares[];
         public int quantidadeCarros;
 
         //Criando um construtor para inicilizar o estacionamento
@@ -55,8 +55,13 @@ public class carrosClasses {
         }
 
         //Método para listar os carros dentro do estacionamento
-        public void listarCarros(){
-            
+        public void listarCarros(Carro carro){
+            for (int i = 0; i < quantidadeCarros; i++) {
+                System.out.println("Carro na " + (i + 1 ) + "ª Vaga - Marca: " + lugares[i].marcaDoCarro +
+                                   " | Modelo: " + lugares[i].modeloDoCarro +
+                                   " | Cor: " + lugares[i].corDoCarro +
+                                   " | Placa: " + lugares[i].placaDoCarro + "\n");
+            }
         }
     }
     public static void main(String[] args) {
@@ -72,6 +77,8 @@ public class carrosClasses {
         estacionamento.adicionarCarro(carroHyundai);
         estacionamento.adicionarCarro(carroChevrolet);
         estacionamento.adicionarCarro(carroFord);
+
+        estacionamento.listarCarros(carroHyundai);
 
     }
 }
