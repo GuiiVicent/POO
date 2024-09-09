@@ -55,7 +55,7 @@ public class carrosClasses {
         }
 
         //Método para listar os carros dentro do estacionamento
-        public void listarCarros(Carro carro){
+        public void listarCarros(){
             for (int i = 0; i < quantidadeCarros; i++) {
                 System.out.println("Carro na " + (i + 1 ) + "ª Vaga - Marca: " + lugares[i].marcaDoCarro +
                                    " | Modelo: " + lugares[i].modeloDoCarro +
@@ -78,7 +78,6 @@ public class carrosClasses {
         estacionamento.adicionarCarro(carroChevrolet);
         estacionamento.adicionarCarro(carroFord);
 
-        estacionamento.listarCarros(carroHyundai);
-
+        estacionamento.listarCarros();
     }
 }
