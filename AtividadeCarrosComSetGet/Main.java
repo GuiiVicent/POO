@@ -11,7 +11,7 @@ passadas como parâmetros nos construtores,
 /**
 * Adiciona um carro no final do vetor de carros se não estiver cheio.
 *
-* @param   carro   o carro que precisa ser adicionado no estacionamento
+* @param   carro: o carro que precisa ser adicionado no estacionamento
 * @return   true se o carro foi colocado com sucesso no final do vetor ou
 *                  false se não houver mais espaço no vetor (estacionamento cheio)
 */
@@ -26,12 +26,13 @@ public class Main {
         Carro carroHyundai = new Carro("Hyundai", "HB20", "preto", "BEE4F00");
         Carro carroChevrolet = new Carro("Chevrolet", "Onix", "cinza", "FUN2M33");
         Carro carroFord = new Carro("Ford", "Ka", "vermelho", "GEZ0W35");
+        Carro carroGol = new Carro("Gol", "Bolinha", "Azul", "IBG5E69");
 
         estacionamento.adicionarCarro(carroHyundai);
         estacionamento.adicionarCarro(carroChevrolet);
         estacionamento.adicionarCarro(carroFord);
 
         estacionamento.listarCarros();
-
+        estacionamento.adicionarCasoNaoCheio(carroGol);
     }
 }

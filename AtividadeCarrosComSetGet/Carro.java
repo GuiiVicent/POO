@@ -1,5 +1,5 @@
 public class Carro {
-    //Criando a classe do carro
+    //criando os atributos do carro
     private String marcaDoCarro;
     private String modeloDoCarro;
     private String corDoCarro;
@@ -7,22 +7,40 @@ public class Carro {
 
     //Criando um construtor para inicializar o carro
     public Carro(String marca, String modelo, String cor, String placa){
-        this.marcaDoCarro = marca;
-        this.modeloDoCarro = modelo;
-        this.corDoCarro = cor;
-        this.placaDoCarro = placa;
+        this.setMarcaDoCarro(marca);
+        this.setModeloDoCarro(modelo);
+        this.setCorDoCarro(cor);
+        this.setPlacaDoCarro(placa);
     }
 
+    //get para obter o valor dos atributos privados
+    public String getMarcaDoCarro() {
+        return marcaDoCarro;
+    }
+
+    //set para permitir que sejam alterados os valores dos atributos privados
     public void setMarcaDoCarro(String marcaDoCarro) {
         this.marcaDoCarro = marcaDoCarro;
+    }
+
+    public String getModeloDoCarro() {
+        return modeloDoCarro;
     }
 
     public void setModeloDoCarro(String modeloDoCarro) {
         this.modeloDoCarro = modeloDoCarro;
     }
 
+    public String getCorDoCarro() {
+        return corDoCarro;
+    }
+
     public void setCorDoCarro(String corDoCarro) {
         this.corDoCarro = corDoCarro;
+    }
+
+    public String getPlacaDoCarro() {
+        return placaDoCarro;
     }
 
     public void setPlacaDoCarro(String placaDoCarro) {

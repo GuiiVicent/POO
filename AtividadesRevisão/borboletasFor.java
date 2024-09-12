@@ -9,9 +9,9 @@ referente à altura das asas de uma borboleta e que desenha um padrão de borbol
 
 Para N = 3
 
-X X
-XXX
-X X
+X   X
+X X X
+X   X
 
 Para N = 5
 
