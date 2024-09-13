@@ -20,6 +20,39 @@ objetos e os armazena no vetor:
 Finalmente, você deve testar quais dos objetos são estruturalmente iguais (serão 3 testes envolvendo 2 objetos cada um) 
 e mostrar a mensagem "Idênticos" se eles de fato forem iguais. */
 
-public class Main {
+public class Principal {
+    public static void main(String[] args) {
+        //Vetor com 10 espaços de Imoveis
+        Imovel vetorDeImoveis[] = new Imovel[10];
 
+        Imovel imovel1 = new Imovel(60, "Rua Professor Legal, 10");
+        Casa casa1 = new Casa(60, "Rua professor Legal, 10");
+        Predio predio1 = new Predio(540, "Rua Professor Legal, 18", 6);
+
+        vetorDeImoveis[0] = imovel1;
+        vetorDeImoveis[1] = casa1;
+        vetorDeImoveis[2] = predio1;
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (i != j) {
+                    if (vetorDeImoveis[i].equals(vetorDeImoveis[j])) {
+                        System.out.println("Idênticos");
+                    }
+                }
+            }
+        }
+
+        if (vetorDeImoveis[0].equals(vetorDeImoveis[1])){
+            System.out.println("Idênticos");
+        }
+
+        if (vetorDeImoveis[1].equals(vetorDeImoveis[2])){
+            System.out.println("Idênticos");
+        }
+
+        if (vetorDeImoveis[0].equals(vetorDeImoveis[2])){
+            System.out.println("Idênticos");
+        }
+    }
 }

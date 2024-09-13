@@ -16,7 +16,7 @@ passadas como parâmetros nos construtores,
 *                  false se não houver mais espaço no vetor (estacionamento cheio)
 */
 
-public class Main {
+public class Principal {
     public static void main(String[] args) {
 
         //Criando o estacionamento dando os parâmetros pedidos pelo construtor
