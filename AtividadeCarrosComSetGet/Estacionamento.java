@@ -37,7 +37,7 @@ public class Estacionamento{
 
     //Método para adicionar um carro no final caso ele não esteja cheio
     public boolean adicionarCasoNaoCheio(Carro carro){
-        if (quantidadeCarros != 50){
+        if (quantidadeCarros < 50){
             lugares[lugares.length-1] = carro;
             System.out.println("Carro na " + lugares.length + "ª Vaga - Marca: " + lugares[lugares.length-1].getMarcaDoCarro() +
                                " | Modelo: " + lugares[lugares.length-1].getModeloDoCarro() +
