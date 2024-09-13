@@ -42,17 +42,5 @@ public class Principal {
                 }
             }
         }
-
-        if (vetorDeImoveis[0].equals(vetorDeImoveis[1])){
-            System.out.println("Idênticos");
-        }
-
-        if (vetorDeImoveis[1].equals(vetorDeImoveis[2])){
-            System.out.println("Idênticos");
-        }
-
-        if (vetorDeImoveis[0].equals(vetorDeImoveis[2])){
-            System.out.println("Idênticos");
-        }
     }
 }
