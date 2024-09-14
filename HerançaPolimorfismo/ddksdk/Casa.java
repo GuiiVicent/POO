@@ -1,33 +1,30 @@
-public class Predio extends Imovel{
-    //atributos do predio
-    private int andares;
+package ddksdk;
 
-    //construtor do predio mais os atributos próprios dele
-    public Predio(double areaConstruida, String endereco, int andares) {
+public class Casa extends Imovel {
+    //construtor da casa com os atributos do ddksdk.Imovel
+    public Casa(double areaConstruida, String endereco){
         super(areaConstruida, endereco);
-        this.andares = andares;
     }
 
     @Override
-    public boolean equals(Object outro){
+    public boolean equals(Object outra){
         //qualquer coisa é diferente de NULL
-        if(outro == null){
+        if(outra == null){
             return false;
         }
         //propriedade REFLEXIVA
-        if(this == outro){
+        if(this == outra){
             return true;
         }
         //objetos de classes diferentes nunca são iguais
-        if(this.getClass() != outro.getClass()){
+        if(this.getClass() != outra.getClass()){
             return false;
         }
-        //conversão explícita para acessar os atributos de outro predio
-        Predio outroPredio = (Predio) outro;
+        //conversão explícita para acessar os atributos de outra casa
+        Casa outraCasa = (Casa) outra;
         //verifica se todos os atributos são iguais
-        if(this.getAreaConstruida() == outroPredio.getAreaConstruida() &&
-           this.getEndereco().equals(outroPredio.getEndereco()) &&
-           this.andares == outroPredio.andares){
+        if(this.getAreaConstruida() == outraCasa.getAreaConstruida() &&
+           this.getEndereco().equals(outraCasa.getEndereco())){
             return true;
         }else{
             return false;
@@ -42,9 +39,5 @@ public class Predio extends Imovel{
         hash = hash * 31 + (int) Math.round(getAreaConstruida());
         hash = hash * 31 + getEndereco().hashCode();
         return hash;
-    }
-
-    public int getAndares() {
-        return andares;
     }
 }

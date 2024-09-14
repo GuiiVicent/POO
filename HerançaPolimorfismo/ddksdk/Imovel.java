@@ -1,9 +1,11 @@
+package ddksdk;
+
 public class Imovel {
-    //atributos de Imovel
+    //atributos de ddksdk.Imovel
     private double areaConstruida; 
     private String endereco;
 
-    //construtor do Imovel
+    //construtor do ddksdk.Imovel
     public Imovel(double areaConstruida, String endereco) {
         this.areaConstruida = areaConstruida;
         this.endereco = endereco;
