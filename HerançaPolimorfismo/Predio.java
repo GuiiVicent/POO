@@ -1,5 +1,3 @@
-package ddksdk;
-
 public class Predio extends Imovel {
     //atributos do predio
     private int andares;

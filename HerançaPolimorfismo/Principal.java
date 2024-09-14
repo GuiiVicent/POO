@@ -1,4 +1,4 @@
-package ddksdk;/* Crie um programa em Java que implemente quatro classes: ddksdk.Imovel, ddksdk.Casa, ddksdk.Predio e ddksdk.Principal.
+/* Crie um programa em Java que implemente quatro classes: ddksdk.Imovel, ddksdk.Casa, ddksdk.Predio e ddksdk.Principal.
 
 A classe ddksdk.Imovel possui dois atributos privados: areaConstruida do tipo double e endereço do tipo String.
 O construtor dessa classe deve ser completo, ou seja, deve ter todas as informações necessárias para criar um 
@@ -42,6 +42,5 @@ public class Principal {
                 }
             }
         }
-        System.out.println("");
     }
 }

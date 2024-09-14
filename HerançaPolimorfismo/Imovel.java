@@ -1,5 +1,3 @@
-package ddksdk;
-
 public class Imovel {
     //atributos de ddksdk.Imovel
     private double areaConstruida; 

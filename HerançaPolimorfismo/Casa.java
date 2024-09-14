@@ -1,5 +1,3 @@
-package ddksdk;
-
 public class Casa extends Imovel {
     //construtor da casa com os atributos do ddksdk.Imovel
     public Casa(double areaConstruida, String endereco){
